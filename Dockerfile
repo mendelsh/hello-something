@@ -1,6 +1,6 @@
 FROM scratch
 
-COPY app/main /
+COPY app/main /main
 
 EXPOSE 8082
 
