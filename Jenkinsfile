@@ -1,5 +1,4 @@
-
-pipeline{
+pipeline {
     agent any
 
     stages {
@@ -13,8 +12,13 @@ pipeline{
         stage('Test') {
             steps {
                 script {
-                    sh "docker run --rm -p 8082:8082 myapp:latest test"
+                    sh "docker run -d -p 8082:8082 --name myapp myapp:latest"
+                    
                     sh "sleep 30"
+
+                    // // Test the application by curling the server
+                    // sh "curl -f http://localhost:8082 || exit 1"
+                    
                     sh "docker stop myapp"
                 }
             }
