@@ -1,0 +1,21 @@
+
+services:
+  server:
+    image: chat-server:v1
+    ports:
+      - "8082:8082"
+    networks:
+      - chat-network
+  
+  frontend:
+    image: chat-frontend:v4
+    ports:
+      - "80:80"
+    networks:
+      - chat-network
+  
+networks:
+  chat-network:
+    driver: bridge
+
+  

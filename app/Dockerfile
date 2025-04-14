@@ -1,16 +1,14 @@
 # Build stage
-FROM golang:1.16-alpine AS builder
+FROM golang:1.24.2 AS builder
 
 WORKDIR /app
 
-COPY app/go.mod app/go.sum ./
-
+COPY go.mod go.sum ./
 RUN go mod tidy
 
-COPY app/ ./
+COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
-
 
 # Final stage
 FROM scratch

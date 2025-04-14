@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  #chat {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #fff;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  #messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  input[type="text"], input[type="button"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #form-section {
+    max-width: 500px;
+    margin: auto;
+  }
+  

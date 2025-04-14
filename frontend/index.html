@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat-App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="form-section">
+  <h2>Join or Create Chat Room</h2>
+  <input type="text" id="name" placeholder="Your name" />
+  <input type="text" id="roomID" placeholder="Room ID (optional)" />
+  <input type="button" value="Create Room" onclick="createRoom()" />
+  <input type="button" value="Join Room" onclick="joinRoom()" />
+</div>
+
+<div id="chat">
+  <h2>Chat Room: <span id="currentRoom"></span></h2>
+  <div id="messages"></div>
+  <input type="text" id="messageInput" placeholder="Type a message..." />
+  <input type="button" value="Send" onclick="sendMessage()" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
