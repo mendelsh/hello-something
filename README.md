@@ -1,3 +1,3 @@
 # hello-something
 
-simple chat app.
+simple chat app example.
